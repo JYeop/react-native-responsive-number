@@ -1,6 +1,6 @@
 {
   "name": "react-native-responsive-percent",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Helps fitting elements to various device views (react-native)",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,8 @@
     "font",
     "fontSize",
     "font-size",
-    "percent"
+    "percent",
+    "responsive"
   ],
   "author": "JYKIM",
   "license": "MIT",

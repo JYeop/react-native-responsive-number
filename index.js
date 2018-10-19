@@ -8,12 +8,6 @@ const floorToFloat = integer => {
 };
 
 export const dmFont = integer => {
-  // let widthToUse;
-  // if (defaultWidth) {
-  //   widthToUse = defaultWidth;
-  // } else {
-  //   widthToUse = 375;
-  // }
   const convertedInteger = Number(integer);
   const widthToUse = 375;
   const dvWidth = Dimensions.get("window").width;

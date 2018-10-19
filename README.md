@@ -4,7 +4,7 @@ It helps you to make responsive view by adjusting size of the elements. You can 
 
 #### Elements
 
-- f: It returns an integer(font size) based on the size of the 'iPhone X or XS'. You can import this with 'dmFont'.
+- f: It returns a number(font size) based on the size of the 'iPhone X or XS'. You can import this with 'dmFont'.
 
 ```js
 import { StyleSheet } from "react-native";
@@ -17,7 +17,7 @@ export default StyleSheet.create({
 });
 ```
 
-- wp: Returns an integer calculated with the percent of the device width. You can import this with 'widthByPercent'.
+- wp: Returns a number calculated with the percent of the device width. You can import this with 'widthByPercent'.
 
 ```js
 import { StyleSheet } from "react-native";
@@ -32,7 +32,7 @@ export default StyleSheet.create({
 });
 ```
 
-- wr: Returns an integer calculated with the ratio of the device width. You can import this with 'widthByRatio'.
+- wr: Returns a number calculated with the ratio of the device width. You can import this with 'widthByRatio'.
 
 ```js
 import { StyleSheet } from "react-native";
@@ -46,7 +46,7 @@ export default StyleSheet.create({
 });
 ```
 
-- hp: Returns an integer calculated with the ratio of the device height. You can import this with 'heightByPercent'.
+- hp: Returns a number calculated with the ratio of the device height. You can import this with 'heightByPercent'.
 
 ```js
 import { StyleSheet } from "react-native";
@@ -61,7 +61,7 @@ export default StyleSheet.create({
 });
 ```
 
-- hr: Returns an integer calculated with the ratio of the device height. You can import this with 'heightByRatio'.
+- hr: Returns a number calculated with the ratio of the device height. You can import this with 'heightByRatio'.
 
 ```js
 import { StyleSheet } from "react-native";
