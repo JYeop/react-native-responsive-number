@@ -1,6 +1,6 @@
 # react-native-responsive-percent
 
-It helps you to make responsice view by adjusting size of the elements. You can use this package for all devices.
+It helps you to make responsive view by adjusting size of the elements. You can use this package for all devices.
 
 #### Elements
 
