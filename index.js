@@ -22,7 +22,6 @@ export const dmFont = integer => {
 };
 
 export const widthByPercent = stringInput => {
-  console.log(typeof stringInput === "number", typeof stringInput == "number");
   const getRatio =
     typeof stringInput === "number"
       ? stringInput / 100
