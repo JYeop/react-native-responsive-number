@@ -1,4 +1,4 @@
-import { Dimensions, Platform, StatusBar } from "react-native";
+import { Dimensions } from "react-native";
 
 const floorToInt = integer => {
   return Math.floor(integer * 10) / 10;

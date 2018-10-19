@@ -1,7 +1,7 @@
 {
   "name": "react-native-responsive-percent",
-  "version": "1.0.0",
-  "description": "Helps to fit elements to devices (react-native)",
+  "version": "1.0.1",
+  "description": "Helps fitting elements to various device views (react-native)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
