@@ -1,0 +1,34 @@
+{
+  "name": "react-native-responsive-percent",
+  "version": "0.0.1",
+  "description": "Helps to fit elements to devices (react-native)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JYeop/react-native-responsive-percent.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-native-component",
+    "react-component",
+    "ios",
+    "android",
+    "react",
+    "font",
+    "fontSize",
+    "font-size",
+    "percent"
+  ],
+  "author": "JYKIM",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JYeop/react-native-responsive-percent/issues"
+  },
+  "homepage": "https://github.com/JYeop/react-native-responsive-percent#readme",
+  "dependencies": {
+    "react-native": ">=0.54.0"
+  }
+}
