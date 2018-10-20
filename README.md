@@ -8,11 +8,12 @@ It helps you to make responsive view by adjusting size of the elements. You can 
 
 ```js
 import { StyleSheet } from "react-native";
-import { f } from "react-native-responsive-percent";
+import { f, dmFont } from "react-native-responsive-percent";
 
 export default StyleSheet.create({
   title: {
     fontSize: f(15) // On iphoneX : 15, iphoneXS Max: 16.5
+    // fontSize: dmFont(15) // On iphoneX : 15, iphoneXS Max: 16.5
   }
 });
 ```
@@ -21,13 +22,14 @@ export default StyleSheet.create({
 
 ```js
 import { StyleSheet } from "react-native";
-import { wp } from "react-native-responsive-percent";
+import { wp, widthByPercent } from "react-native-responsive-percent";
 
 export default StyleSheet.create({
   image: {
     width: wp(15) // On iphoneX : 56, iphoneXS Max: 62
     // width: wp('15%')   // Same above
     // width: wp('15')   // Same above
+    // width: widthByPercent(15)   // Same above
   }
 });
 ```
@@ -36,12 +38,13 @@ export default StyleSheet.create({
 
 ```js
 import { StyleSheet } from "react-native";
-import { wr } from "react-native-responsive-percent";
+import { wr, widthByRatio } from "react-native-responsive-percent";
 
 export default StyleSheet.create({
   image: {
     width: wr(0.15) // On iphoneX : 56, iphoneXS Max: 62
     // width: wr('0.15')   // Same above
+    // width: widthByRatio(15)   // Same above
   }
 });
 ```
@@ -50,13 +53,14 @@ export default StyleSheet.create({
 
 ```js
 import { StyleSheet } from "react-native";
-import { hp } from "react-native-responsive-percent";
+import { hp, heightByPercent } from "react-native-responsive-percent";
 
 export default StyleSheet.create({
   image: {
     height: hp(15) // On iphoneX : 121, iphoneXS Max: 134
     // height: hp('15%')   // Same above
     // height: hp('15')   // Same above
+    // width: heightByPercent(15)   // Same above
   }
 });
 ```
@@ -71,6 +75,7 @@ export default StyleSheet.create({
   image: {
     height: hr(0.15) // On iphoneX : 121, iphoneXS Max: 134
     // height: hr('0.15')   // Same above
+    // width: heightByRatio(15)   // Same above
   }
 });
 ```

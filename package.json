@@ -1,6 +1,6 @@
 {
   "name": "react-native-responsive-percent",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "description": "Helps fitting elements to various device views (react-native)",
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,7 @@
     "url": "https://github.com/JYeop/react-native-responsive-percent/issues"
   },
   "homepage": "https://github.com/JYeop/react-native-responsive-percent#readme",
-  "dependencies": {
+  "peerDependencies": {
     "react-native": ">=0.54.0"
   }
 }
