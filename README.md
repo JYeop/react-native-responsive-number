@@ -2,18 +2,19 @@
 
 It helps you to make responsive view by adjusting size of the elements. You can use this package for all devices.
 
-#### Elements
+### Elements
 
-- f: It returns a number(font size) based on the size of the 'iPhone X or XS'. You can import this with 'dmFont'.
+- f: Returns a number(font size) based on the size of the 'iPhone X or XS'. You can import this with 'dmFont, responsiveFontSize'.
 
 ```js
 import { StyleSheet } from "react-native";
-import { f, dmFont } from "react-native-responsive-percent";
+import { f, dmFont, responsiveFontSize } from "react-native-responsive-percent";
 
 export default StyleSheet.create({
   title: {
     fontSize: f(15) // On iphoneX : 15, iphoneXS Max: 16.5
-    // fontSize: dmFont(15) // On iphoneX : 15, iphoneXS Max: 16.5
+    // fontSize: dmFont(15) // Same above
+    // fontSize: responsiveFontSize(15) // Same above
   }
 });
 ```

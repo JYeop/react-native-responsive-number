@@ -58,6 +58,7 @@ export const heightByRatio = stringInput => {
 };
 
 export const f = dmFont;
+export const responsiveFontSize = dmFont;
 export const wp = widthByPercent;
 export const wr = widthByRatio;
 export const hp = heightByPercent;
@@ -69,6 +70,7 @@ export default {
   heightByRatio,
   widthByPercent,
   heightByPercent,
+  responsiveFontSize: dmFont,
   f: dmFont,
   wp: widthByPercent,
   wr: widthByRatio,
