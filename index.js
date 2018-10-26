@@ -5,7 +5,7 @@ const floorToInt = integer => {
 };
 const floorToFloat = integer => {
   return Math.floor(integer);
-};
+}
 
 export const dmFont = integer => {
   const convertedInteger = Number(integer);
@@ -57,6 +57,9 @@ export const heightByRatio = stringInput => {
   return floorToFloat(getRatio * dvHeight);
 };
 
+export const deviceHeight = Dimensions.get("window").height;
+export const deviceWidth = Dimensions.get("window").width;
+
 export const f = dmFont;
 export const responsiveFontSize = dmFont;
 export const wp = widthByPercent;
@@ -75,5 +78,7 @@ export default {
   wp: widthByPercent,
   wr: widthByRatio,
   hp: heightByPercent,
-  hr: heightByRatio
+  hr: heightByRatio,
+  deviceHeight,
+  deviceWidth
 };
