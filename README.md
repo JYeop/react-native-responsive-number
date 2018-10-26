@@ -128,7 +128,7 @@ export default StyleSheet.create({
 import { StyleSheet } from "react-native";
 import { screenRatio } from "react-native-responsive-percent";
 
-console.log(screenRatio); //iPhone X : 2.16
+console.log(screenRatio()); //iPhone X : 2.16
 ```
 
 #### Example
