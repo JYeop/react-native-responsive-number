@@ -109,7 +109,7 @@ export default StyleSheet.create({
 });
 ```
 
-- deviceWidth: Returns the screen pixel height of the device
+- deviceWidth: Returns the screen pixel height of the device.
 
 ```js
 import { StyleSheet } from "react-native";
@@ -120,6 +120,15 @@ export default StyleSheet.create({
     width: deviceWidth // returns the device width
   }
 });
+```
+
+- screenRatio: Returns the screen ratio.
+
+```js
+import { StyleSheet } from "react-native";
+import { screenRatio } from "react-native-responsive-percent";
+
+console.log(screenRatio); //iPhone X : 2.16
 ```
 
 #### Example

@@ -60,6 +60,10 @@ export const heightByRatio = stringInput => {
 export const deviceHeight = Dimensions.get("window").height;
 export const deviceWidth = Dimensions.get("window").width;
 
+export const screenRatio = () => {
+  return Math.floor((deviceHeight / deviceWidth) * 100) / 100;
+};
+
 export const responsiveNumber = dmFont;
 export const f = dmFont;
 export const responsiveFontSize = dmFont;
@@ -82,5 +86,6 @@ export default {
   hp: heightByPercent,
   hr: heightByRatio,
   deviceHeight,
-  deviceWidth
+  deviceWidth,
+  screenRatio
 };
