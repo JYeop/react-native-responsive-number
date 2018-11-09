@@ -6,6 +6,9 @@ const floorToInt = integer => {
 const floorToFloat = integer => {
   return Math.floor(integer);
 };
+const floorBelowN = (integer, n) => {
+  return floorToFloat(integer * Math.pow(10, n)) / Math.pow(10, n);
+};
 
 export const dmFont = integer => {
   const convertedInteger = Number(integer);
@@ -58,7 +61,7 @@ export const heightByRatio = stringInput => {
 };
 
 export const responsiveLetterSpacing = (letterTrackingValue, fontPixel) => {
-  return Number(letterTrackingValue) * Number(dmFont(fontPixel));
+  return (Number(letterTrackingValue) * Number(dmFont(fontPixel))) / 1000;
 };
 
 export const deviceHeight = Dimensions.get("window").height;

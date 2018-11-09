@@ -1,6 +1,6 @@
 {
   "name": "react-native-responsive-percent",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "description": "Helps fitting elements to various device views (react-native)",
   "main": "index.js",
   "scripts": {
