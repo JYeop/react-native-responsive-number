@@ -58,7 +58,7 @@ export const heightByRatio = stringInput => {
 };
 
 export const responsiveLetterSpacing = (letterTrackingValue, fontPixel) => {
-  return Number(letterTrackingValue) * Number(fontPixel);
+  return Number(letterTrackingValue) * Number(dmFont(fontPixel));
 };
 
 export const deviceHeight = Dimensions.get("window").height;
@@ -91,5 +91,6 @@ export default {
   hr: heightByRatio,
   deviceHeight,
   deviceWidth,
-  screenRatio
+  screenRatio,
+  responsiveLetterSpacing
 };
