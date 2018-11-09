@@ -57,6 +57,10 @@ export const heightByRatio = stringInput => {
   return floorToFloat(getRatio * dvHeight);
 };
 
+export const responsiveLetterSpacing = (letterTrackingValue, fontPixel) => {
+  return Number(letterTrackingValue) * Number(fontPixel);
+};
+
 export const deviceHeight = Dimensions.get("window").height;
 export const deviceWidth = Dimensions.get("window").width;
 

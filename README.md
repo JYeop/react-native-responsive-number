@@ -19,6 +19,16 @@ export default StyleSheet.create({
 });
 ```
 
+- responsiveLetterSpacing: returns letter spacing, the method of the Photoshop. Parameter type is all numbers, but Numberable strings (ex: '102') can be them.
+
+```js
+import { StyleSheet } from "react-native";
+import { responsiveLetterSpacing } from "react-native-responsive-percent";
+
+console.log(responsiveLetterSpacing(-1.2, 15));
+// console.log(responsiveLetterSpacing("-1.2", "15")); // Same above
+```
+
 - f: Returns a number(font size) based on the size of the 'iPhone X or XS'. You can import this with 'dmFont, responsiveFontSize'.
 
 ```js
