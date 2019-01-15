@@ -74,7 +74,13 @@ export const screenRatio = () => {
   return Math.floor((deviceHeight / deviceWidth) * 100) / 100;
 };
 
-export const responsiveNumber = dmFont;
+export const responsiveNumber = integer => {
+  const convertedInteger = Number(integer);
+  const widthToUse = 375;
+  const dvWidth = Dimensions.get("window").width;
+  const ratio = dvWidth / widthToUse;
+  return floorToInt(convertedInteger * ratio);
+};
 export const f = dmFont;
 export const responsiveFontSize = dmFont;
 export const wp = widthByPercent;
