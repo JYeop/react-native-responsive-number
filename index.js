@@ -13,12 +13,17 @@ const floorBelowN = (integer, n) => {
 };
 
 export const dmFont = integer => {
+  // const convertedInteger = Number(integer);
+  // const widthToUse = 375;
+  // // const dvWidth = Dimensions.get("window").width;
+  // // const ratio = dvWidth / widthToUse;
+  // // return floorToInt(convertedInteger * ratio);
+  // return floorToInt(convertedInteger * pixelRatio);
   const convertedInteger = Number(integer);
   const widthToUse = 375;
-  // const dvWidth = Dimensions.get("window").width;
-  // const ratio = dvWidth / widthToUse;
-  // return floorToInt(convertedInteger * ratio);
-  return floorToInt(convertedInteger * pixelRatio);
+  const dvWidth = Dimensions.get("window").width;
+  const ratio = dvWidth / widthToUse;
+  return floorToInt(convertedInteger * ratio);
 };
 
 export const widthByPercent = stringInput => {
