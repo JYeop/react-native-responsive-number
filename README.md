@@ -4,7 +4,7 @@ Helps you to make responsive view by adjusting size of the elements. You can use
 
 ## Elements
 
-- responsiveNumber(function): Returns a number based on the size of the 'iPhone X or XS'. Maybe you will use this more than below functions.
+- responsiveNumber(function): Returns a number based on the size of the 'iPhone X or XS'. Maybe you will use this more than below functions. Mostly, i use this function for reactive fontsizes.
 
 ```js
 import { StyleSheet } from "react-native";
@@ -25,6 +25,7 @@ export default StyleSheet.create({
 import { StyleSheet } from "react-native";
 import { responsiveLetterSpacing } from "react-native-responsive-number";
 
+// responsiveNumber(letterSpacing, fontsize)
 StyleSheet.create({
   title: {
     fontSize: responsiveNumber(15), // MUST
