@@ -1,14 +1,14 @@
-# react-native-responsive-percent
+# react-native-responsive-number
 
-It helps you to make responsive view by adjusting size of the elements. You can use this package for all devices.
+Helps you to make responsive view by adjusting size of the elements. You can use this package for all devices. Also, can controll letterspacing. Just put the photoshop value with font size!
 
-### Elements
+## Elements
 
 - responsiveNumber: Returns a number based on the size of the 'iPhone X or XS'. Maybe you will use this more than below functions.
 
 ```js
 import { StyleSheet } from "react-native";
-import { responsiveNumber } from "react-native-responsive-percent";
+import { responsiveNumber } from "react-native-responsive-number";
 
 export default StyleSheet.create({
   title: {
@@ -19,89 +19,77 @@ export default StyleSheet.create({
 });
 ```
 
-- responsiveLetterSpacing: returns letter spacing, the method of the Photoshop. Parameter type is all numbers, but Numberable strings (ex: '102') can be them.
+- responsiveLetterSpacing: returns letter spacing, the method of the Photoshop. Parameter type is all numbers, but you can use numberable strings (ex: '102') . If you want css unit, you don`t have to use this. Just put pixel unit(ex: -1.1). It is what react-native does.
+
+### Must provide font size like the example.
 
 ```js
 import { StyleSheet } from "react-native";
-import { responsiveLetterSpacing } from "react-native-responsive-percent";
+import { responsiveLetterSpacing } from "react-native-responsive-number";
 
-console.log(responsiveLetterSpacing(-1.2, 15));
-// console.log(responsiveLetterSpacing("-1.2", "15")); // Same above
-```
-
-- f: Returns a number(font size) based on the size of the 'iPhone X or XS'. You can import this with 'dmFont, responsiveFontSize'.
-
-```js
-import { StyleSheet } from "react-native";
-import { responsiveFontSize, f, dmFont } from "react-native-responsive-percent";
-
-export default StyleSheet.create({
+StyleSheet.create({
   title: {
-    fontSize: responsiveFontSize(15) // On iphoneX : 15, iphoneXS Max: 16.5
-    // fontSize: dmFont(15) // Same above
-    // fontSize: f(15) // Same above
+    fontSize: responsiveNumber(15), // MUST
+    letterSpacing: responsiveNumber(-30, 15) // MUST PROVIDE THE FONTSIZE TOO!!!
+    // responsiveLetterSpacing("-30", "15"); // Same above
   }
 });
 ```
 
-- wp: Returns a number calculated with the percent of the device width. You can import this with 'widthByPercent'.
+- widthByPercent: Returns a number calculated with the percent of the device width.
 
 ```js
 import { StyleSheet } from "react-native";
-import { wp, widthByPercent } from "react-native-responsive-percent";
+import { wp, widthByPercent } from "react-native-responsive-number";
 
 export default StyleSheet.create({
   image: {
     width: widthByPercent(15) // On iphoneX : 56, iphoneXS Max: 62
     // width: widthByPercent('15%')   // Same above
-    // width: wp('15')   // Same above
-    // width: wp(15)   // Same above
+    // width: widthByPercent('15')   // Same above
   }
 });
 ```
 
-- wr: Returns a number calculated with the ratio of the device width. You can import this with 'widthByRatio'.
+- widthByRatio: Returns a number calculated with the ratio of the device width.
 
 ```js
 import { StyleSheet } from "react-native";
-import { wr, widthByRatio } from "react-native-responsive-percent";
+import { widthByRatio } from "react-native-responsive-number";
 
 export default StyleSheet.create({
   image: {
     width: widthByRatio(0.15) // On iphoneX : 56, iphoneXS Max: 62
     // width: widthByRatio('0.15')   // Same above
-    // width: wr(15)   // Same above
   }
 });
 ```
 
-- hp: Returns a number calculated with the ratio of the device height. You can import this with 'heightByPercent'.
+- heightByPercent: Returns a number calculated with the ratio of the device height.
 
 ```js
 import { StyleSheet } from "react-native";
-import { hp, heightByPercent } from "react-native-responsive-percent";
+import { heightByPercent } from "react-native-responsive-number";
 
 export default StyleSheet.create({
   image: {
     height: heightByPercent(15) // On iphoneX : 121, iphoneXS Max: 134
     // height: heightByPercent('15%')   // Same above
-    // height: hp('15')   // Same above
-    // width: hp(15)   // Same above
+    // height: heightByPercent('15')   // Same above
   }
 });
 ```
 
-- hr: Returns a number calculated with the ratio of the device height. You can import this with 'heightByRatio'.
+- heightByRatio: Returns a number calculated with the ratio of the device height.
 
 ```js
 import { StyleSheet } from "react-native";
-import { hr, heightByRatio } from "react-native-responsive-percent";
+import { heightByRatio } from "react-native-responsive-number";
 
 export default StyleSheet.create({
   image: {
     height: heightByRatio(0.15) // On iphoneX : 121, iphoneXS Max: 134
     // height: heightByRatio('0.15')   // Same above
-    // width: hr(15)   // Same above
   }
 });
 ```
@@ -110,11 +98,11 @@ export default StyleSheet.create({
 
 ```js
 import { StyleSheet } from "react-native";
-import { deviceHeight } from "react-native-responsive-percent";
+import { deviceHeight } from "react-native-responsive-number";
 
 export default StyleSheet.create({
   image: {
-    height: deviceHeight // returns the device height
+    height: deviceHeight // returns the device screen height(pixel)
   }
 });
 ```
@@ -123,11 +111,11 @@ export default StyleSheet.create({
 
 ```js
 import { StyleSheet } from "react-native";
-import { deviceWidth } from "react-native-responsive-percent";
+import { deviceWidth } from "react-native-responsive-number";
 
 export default StyleSheet.create({
   image: {
-    width: deviceWidth // returns the device width
+    width: deviceWidth // returns the device screen width(pixel)
   }
 });
 ```
@@ -136,20 +124,7 @@ export default StyleSheet.create({
 
 ```js
 import { StyleSheet } from "react-native";
-import { screenRatio } from "react-native-responsive-percent";
+import { screenRatio } from "react-native-responsive-number";
 
 console.log(screenRatio()); //iPhone X : 2.16
-```
-
-#### Example
-
-```js
-import { StyleSheet } from "react-native";
-import RNRP from "react-native-responsive-percent";
-
-export default StyleSheet.create({
-  title: {
-    fontSize: RNRP.f(15)
-  }
-});
 ```
