@@ -4,7 +4,7 @@ Helps you to make responsive view by adjusting size of the elements. You can use
 
 ## Before Start
 
-If you want the 'font scaling' function of the smartphone, just add this code in your index.js.
+If you don`t want the 'font scaling' function of the smartphone, just add this code in your index.js.
 
 ```js
 import { Text } from "react-native";
