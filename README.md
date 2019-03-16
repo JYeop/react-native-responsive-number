@@ -4,7 +4,7 @@ Helps you to make responsive view by adjusting size of the elements. You can use
 
 ## Elements
 
-- responsiveNumber: Returns a number based on the size of the 'iPhone X or XS'. Maybe you will use this more than below functions.
+- responsiveNumber(function): Returns a number based on the size of the 'iPhone X or XS'. Maybe you will use this more than below functions.
 
 ```js
 import { StyleSheet } from "react-native";
@@ -19,7 +19,7 @@ export default StyleSheet.create({
 });
 ```
 
-- responsiveLetterSpacing: converts react-native unit letter spacing to the method of the Photoshop. Parameter type is all numbers, but you can use numberable strings (ex: '102') . If you want css unit, you don`t have to use this. Just put pixel unit(ex: -1.1). It is what react-native does. **Must provide font size like the example.**
+- responsiveLetterSpacing(function): converts react-native unit letter spacing to the method of the Photoshop. Parameter type is all numbers, but you can use numberable strings (ex: '102') . If you want css unit, you don`t have to use this. Just put pixel unit(ex: -1.1). It is what react-native does. **Must provide font size like the example.**
 
 ```js
 import { StyleSheet } from "react-native";
@@ -34,11 +34,11 @@ StyleSheet.create({
 });
 ```
 
-- widthByPercent: Returns a number calculated with the percent of the device width.
+- widthByPercent(function): Returns a number calculated with the percent of the device width.
 
 ```js
 import { StyleSheet } from "react-native";
-import { wp, widthByPercent } from "react-native-responsive-number";
+import { widthByPercent } from "react-native-responsive-number";
 
 export default StyleSheet.create({
   image: {
@@ -49,7 +49,7 @@ export default StyleSheet.create({
 });
 ```
 
-- widthByRatio: Returns a number calculated with the ratio of the device width.
+- widthByRatio(function): Returns a number calculated with the ratio of the device width.
 
 ```js
 import { StyleSheet } from "react-native";
@@ -78,7 +78,7 @@ export default StyleSheet.create({
 });
 ```
 
-- heightByRatio: Returns a number calculated with the ratio of the device height.
+- heightByRatio(function): Returns a number calculated with the ratio of the device height.
 
 ```js
 import { StyleSheet } from "react-native";
@@ -92,7 +92,7 @@ export default StyleSheet.create({
 });
 ```
 
-- deviceHeight: Returns the screen pixel height of the device
+- deviceHeight(number): Returns the screen pixel height of the device
 
 ```js
 import { StyleSheet } from "react-native";
@@ -105,7 +105,7 @@ export default StyleSheet.create({
 });
 ```
 
-- deviceWidth: Returns the screen pixel height of the device.
+- deviceWidth(number): Returns the screen pixel height of the device.
 
 ```js
 import { StyleSheet } from "react-native";
@@ -118,7 +118,7 @@ export default StyleSheet.create({
 });
 ```
 
-- screenRatio: Returns the screen ratio.
+- screenRatio(function): Returns the screen ratio.
 
 ```js
 import { StyleSheet } from "react-native";
