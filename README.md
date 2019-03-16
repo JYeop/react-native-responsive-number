@@ -2,7 +2,17 @@
 
 Helps you to make responsive view by adjusting size of the elements. You can use this package for all devices. Also, can controll letterspacing. Just put the photoshop value with font size!
 
-## Elements
+## Before Start
+
+If you want the 'font scaling' function of the smartphone, just add this code in your index.js.
+
+```js
+import { Text } from "react-native";
+Text.defaultProps = Text.defaultProps || {};
+Text.defaultProps.allowFontScaling = false;
+```
+
+## Components
 
 - responsiveNumber(function): Returns a number based on the size of the 'iPhone X or XS'. Maybe you will use this more than any of the functions below. Mostly, i use this function for reactive fontsizes, width, height.
 
