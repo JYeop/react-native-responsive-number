@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_native_1 = require("react-native");
 // const pixelRatio = PixelRatio.getFontScale();
+exports.deviceHeight = react_native_1.Dimensions.get("window").height;
+exports.deviceWidth = react_native_1.Dimensions.get("window").width;
 var floorToInt = function (integer) {
     return Math.floor(integer * 10) / 10;
 };
@@ -15,8 +17,7 @@ exports.widthByPercent = function (stringInput) {
     var getRatio = typeof stringInput === "number"
         ? stringInput / 100
         : Number(stringInput.replace("%", "")) / 100;
-    var dvWidth = react_native_1.Dimensions.get("window").width;
-    return floorToFloat(getRatio * dvWidth);
+    return floorToFloat(getRatio * exports.deviceWidth);
 };
 exports.widthByRatio = function (stringInput) {
     var getRatio;
@@ -26,8 +27,7 @@ exports.widthByRatio = function (stringInput) {
     else {
         getRatio = Number(stringInput);
     }
-    var dvWidth = react_native_1.Dimensions.get("window").width;
-    return floorToFloat(getRatio * dvWidth);
+    return floorToFloat(getRatio * exports.deviceWidth);
 };
 exports.heightByPercent = function (stringInput) {
     var getRatio;
@@ -37,8 +37,7 @@ exports.heightByPercent = function (stringInput) {
     else {
         getRatio = Number(stringInput.replace("%", "")) / 100;
     }
-    var dvHeight = react_native_1.Dimensions.get("window").height;
-    return floorToFloat(getRatio * dvHeight);
+    return floorToFloat(getRatio * exports.deviceHeight);
 };
 exports.heightByRatio = function (stringInput) {
     var getRatio;
@@ -48,22 +47,24 @@ exports.heightByRatio = function (stringInput) {
     else {
         getRatio = Number(stringInput);
     }
-    var dvHeight = react_native_1.Dimensions.get("window").height;
-    return floorToFloat(getRatio * dvHeight);
+    return floorToFloat(getRatio * exports.deviceHeight);
 };
 exports.responsiveLetterSpacing = function (letterTrackingValue, fontPixel) {
     return ((Number(letterTrackingValue) * Number(exports.responsiveNumber(fontPixel))) / 1000);
 };
-exports.deviceHeight = react_native_1.Dimensions.get("window").height;
-exports.deviceWidth = react_native_1.Dimensions.get("window").width;
 exports.screenRatio = function () {
     return Math.floor((exports.deviceHeight / exports.deviceWidth) * 100) / 100;
 };
 exports.responsiveNumber = function (integer) {
     var convertedInteger = Number(integer);
     var widthToUse = 375;
-    var dvWidth = react_native_1.Dimensions.get("window").width;
-    var ratio = dvWidth / widthToUse;
+    var ratio = exports.deviceWidth / widthToUse;
+    return floorToInt(convertedInteger * ratio);
+};
+exports.responsiveNumberByHeight = function (integer) {
+    var convertedInteger = Number(integer);
+    var widthToUse = 375;
+    var ratio = exports.deviceWidth / widthToUse;
     return floorToInt(convertedInteger * ratio);
 };
 exports.default = {
