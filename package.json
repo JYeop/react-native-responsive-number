@@ -1,6 +1,6 @@
 {
   "name": "react-native-responsive-number",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Helps fitting elements to various device views (react-native)",
   "main": "src/index.js",
   "types": "src/index.d.ts",
