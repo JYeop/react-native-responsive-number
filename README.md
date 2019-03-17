@@ -38,7 +38,7 @@ import { responsiveLetterSpacing } from "react-native-responsive-number";
 // responsiveNumber(letterSpacing, fontsize)
 StyleSheet.create({
   title: {
-    fontSize: responsiveNumber(15), // MUST
+    fontSize: responsiveNumber(15),
     letterSpacing: responsiveNumber(-30, 15) // MUST PROVIDE THE FONTSIZE TOO!!!
     // responsiveLetterSpacing("-30", "15"); // Same above
   }
