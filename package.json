@@ -1,11 +1,15 @@
 {
   "name": "react-native-responsive-number",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Helps fitting elements to various device views (react-native)",
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JYeop/react-native-responsive-number.git"
   },
   "keywords": [
     "react-native",
