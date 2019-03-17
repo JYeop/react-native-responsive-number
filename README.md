@@ -29,7 +29,7 @@ export default StyleSheet.create({
 });
 ```
 
-- responsiveLetterSpacing(function): converts react-native unit letter spacing to the method of the Photoshop. Parameter type is all numbers, but you can use numberable strings (ex: '102') . If you want css unit, you don`t have to use this. Just put pixel unit(ex: -1.1). It is what react-native does. **Must provide font size like the example.**
+- responsiveLetterSpacing(function): Converts the method of the Photoshop to the react-native unit letter spacing. Parameter type is all numbers, but you can use numberable strings (ex: '102') . If you want css unit, you don`t have to use this. Just put pixel unit(ex: -1.1). It is what react-native does. **Must provide font size like the example.**
 
 ```js
 import { StyleSheet } from "react-native";
