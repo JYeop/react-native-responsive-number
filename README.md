@@ -2,6 +2,9 @@
 
 Helps you to make responsive view by adjusting size of the elements. You can use this package for all devices. Also, can controll letterspacing. Just put the photoshop value with font size!
 
+![Imgur](https://i.imgur.com/nXXbVen.jpg "Galaxy S10+")
+![Imgur](https://i.imgur.com/UeQ9jBV.png "iPhone XS")
+
 ## Before Start
 
 If you don`t want the 'font scaling' function of the smartphone, just add this code in your index.js.
