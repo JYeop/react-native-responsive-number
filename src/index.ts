@@ -62,6 +62,13 @@ export const responsiveLetterSpacing = (
   );
 };
 
+export const letterSpacing = (
+  letterTrackingValue: number,
+  fontPixel: number
+): number => {
+  return (Number(letterTrackingValue) * Number(fontPixel)) / 1000;
+};
+
 export const screenRatio = (): number => {
   return Math.floor((deviceHeight / deviceWidth) * 100) / 100;
 };
