@@ -38,12 +38,28 @@ export default StyleSheet.create({
 import { StyleSheet } from "react-native";
 import { responsiveLetterSpacing } from "react-native-responsive-number";
 
-// responsiveNumber(letterSpacing, fontsize)
+// responsiveLetterSpacing(letterSpacing, fontsize)
 StyleSheet.create({
   title: {
     fontSize: responsiveNumber(15),
     letterSpacing: responsiveLetterSpacing(-30, 15) // MUST PROVIDE THE FONTSIZE TOO!!!
     // responsiveLetterSpacing("-30", "15"); // Same above
+  }
+});
+```
+
+- letterSpacing(function): Converts the method of the Photoshop to the react-native unit letter spacing. Parameter type is all numbers, but you can use numberable strings (ex: '102') . If you want css unit, you don`t have to use this. Just put pixel unit(ex: -1.1). It is what react-native does. **Its different from responsiveLetterSpacing. It is not for responsive Ui. **
+
+```js
+import { StyleSheet } from "react-native";
+import { letterSpacing } from "react-native-responsive-number";
+
+// letterSpacing(letterSpacing, fontsize)
+StyleSheet.create({
+  title: {
+    fontSize: 15,
+    letterSpacing: letterSpacing(-30, 15) // MUST PROVIDE THE FONTSIZE TOO!!!
+    // letterSpacing("-30", "15"); // Same above
   }
 });
 ```
