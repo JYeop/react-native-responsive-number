@@ -7,7 +7,7 @@ Helps you to make responsive view by adjusting size of the elements. You can use
 
 ## Before Start
 
-If you don`t want the 'font scaling' function of the smartphone, just add this code in your index.js.
+If you don't want the 'font scaling' function of the smartphone, just add this code in your `index.js`.
 
 ```js
 import { Text } from "react-native";
@@ -17,7 +17,7 @@ Text.defaultProps.allowFontScaling = false;
 
 ## Components
 
-- responsiveNumber(function): Returns a number based on the size of the 'iPhone X or XS'. Maybe you will use this more than any of the functions below. Mostly, i use this function for reactive fontsizes, width, height.
+- `responsiveNumber(function)`: Returns a number based on the size of the iPhone X or XS. Maybe you will use this more than any of the functions below. Mostly, I use this function for reactive `fontsizes`, `width`, `height`.
 
 ```js
 import { StyleSheet } from "react-native";
@@ -25,14 +25,14 @@ import { responsiveNumber } from "react-native-responsive-number";
 
 export default StyleSheet.create({
   title: {
-    fontSize: responsiveNumber(15), // On iphoneX : 15, iphoneXS Max: 16.5
-    width: responsiveNumber(120), // On iphoneX : 120, iphoneXS Max: 132
-    height: responsiveNumber(270) // On iphoneX : 270, iphoneXS Max: 297
+    fontSize: responsiveNumber(15), // On iPhone X : 15, iPhone XS Max: 16.5
+    width: responsiveNumber(120), // On iPhone X : 120, iPhone XS Max: 132
+    height: responsiveNumber(270) // On iPhone X : 270, iPhone XS Max: 297
   }
 });
 ```
 
-- responsiveLetterSpacing(function): Converts the method of the Photoshop to the react-native unit letter spacing. Parameter type is all numbers, but you can use numberable strings (ex: '102') . If you want css unit, you don`t have to use this. Just put pixel unit(ex: -1.1). It is what react-native does. **Must provide font size like the example.**
+- `responsiveLetterSpacing(function)`: Converts the method of the Photoshop to the react-native unit letter spacing. Parameter type is all numbers, but you can use numberable strings (ex: `102`) . If you want CSS unit, you don't have to use this. Just put pixel unit(ex: `-1.1`). It is what react-native does. **Must provide font size like the example.**
 
 ```js
 import { StyleSheet } from "react-native";
@@ -48,7 +48,7 @@ StyleSheet.create({
 });
 ```
 
-- letterSpacing(function): Converts the method of the Photoshop to the react-native unit letter spacing. Parameter type is all numbers, but you can use numberable strings (ex: '102') . If you want css unit, you don`t have to use this. Just put pixel unit(ex: -1.1). It is what react-native does. **Its different from responsiveLetterSpacing. It is not for responsive Ui. **
+- `letterSpacing(function)`: Converts the method of the Photoshop to the react-native unit letter spacing. Parameter type is all numbers, but you can use numberable strings (ex: `102`) . If you want CSS unit, you don't have to use this. Just put pixel unit(ex: `-1.1`). It is what react-native does. **Its different from responsiveLetterSpacing. It is not for responsive Ui. **
 
 ```js
 import { StyleSheet } from "react-native";
@@ -64,7 +64,7 @@ StyleSheet.create({
 });
 ```
 
-- widthByPercent(function): Returns a number calculated with the percent of the device width.
+- `widthByPercent(function)`: Returns a number calculated with the percent of the device width.
 
 ```js
 import { StyleSheet } from "react-native";
@@ -72,14 +72,14 @@ import { widthByPercent } from "react-native-responsive-number";
 
 export default StyleSheet.create({
   image: {
-    width: widthByPercent(15) // On iphoneX : 56, iphoneXS Max: 62
+    width: widthByPercent(15) // On iPhone X : 56, iPhone XS Max: 62
     // width: widthByPercent('15%')   // Same above
     // width: widthByPercent('15')   // Same above
   }
 });
 ```
 
-- widthByRatio(function): Returns a number calculated with the ratio of the device width.
+- `widthByRatio(function)`: Returns a number calculated with the ratio of the device width.
 
 ```js
 import { StyleSheet } from "react-native";
@@ -87,13 +87,13 @@ import { widthByRatio } from "react-native-responsive-number";
 
 export default StyleSheet.create({
   image: {
-    width: widthByRatio(0.15) // On iphoneX : 56, iphoneXS Max: 62
+    width: widthByRatio(0.15) // On iPhone X : 56, iPhone XS Max: 62
     // width: widthByRatio('0.15')   // Same above
   }
 });
 ```
 
-- heightByPercent: Returns a number calculated with the ratio of the device height.
+- `heightByPercent`: Returns a number calculated with the ratio of the device height.
 
 ```js
 import { StyleSheet } from "react-native";
@@ -101,14 +101,14 @@ import { heightByPercent } from "react-native-responsive-number";
 
 export default StyleSheet.create({
   image: {
-    height: heightByPercent(15) // On iphoneX : 121, iphoneXS Max: 134
+    height: heightByPercent(15) // On iPhone X : 121, iPhone XS Max: 134
     // height: heightByPercent('15%')   // Same above
     // height: heightByPercent('15')   // Same above
   }
 });
 ```
 
-- heightByRatio(function): Returns a number calculated with the ratio of the device height.
+- `heightByRatio(function)`: Returns a number calculated with the ratio of the device height.
 
 ```js
 import { StyleSheet } from "react-native";
@@ -116,13 +116,13 @@ import { heightByRatio } from "react-native-responsive-number";
 
 export default StyleSheet.create({
   image: {
-    height: heightByRatio(0.15) // On iphoneX : 121, iphoneXS Max: 134
+    height: heightByRatio(0.15) // On iPhone X : 121, iPhone XS Max: 134
     // height: heightByRatio('0.15')   // Same above
   }
 });
 ```
 
-- deviceHeight(number): Returns the screen pixel height of the device
+- `deviceHeight(number)`: Returns the screen pixel height of the device
 
 ```js
 import { StyleSheet } from "react-native";
@@ -135,7 +135,7 @@ export default StyleSheet.create({
 });
 ```
 
-- deviceWidth(number): Returns the screen pixel height of the device.
+- `deviceWidth(number)`: Returns the screen pixel height of the device.
 
 ```js
 import { StyleSheet } from "react-native";
@@ -148,11 +148,11 @@ export default StyleSheet.create({
 });
 ```
 
-- screenRatio(function): Returns the screen ratio.
+- `screenRatio(function)`: Returns the screen ratio.
 
 ```js
 import { StyleSheet } from "react-native";
 import { screenRatio } from "react-native-responsive-number";
 
-console.log(screenRatio()); //iPhone X : 2.16
+console.log(screenRatio()); // iPhone X : 2.16
 ```
