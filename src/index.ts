@@ -76,7 +76,7 @@ export const screenRatio = (): number => {
 export const responsiveNumber = (integer: number): number => {
   const convertedInteger = Number(integer);
   const widthToUse = 375;
-  const ratio = deviceWidth / widthToUse;
+  const ratio = Dimensions.get("window").width / widthToUse;
   return floorToInt(convertedInteger * ratio);
 };
 
