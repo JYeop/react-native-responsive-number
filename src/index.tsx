@@ -3,7 +3,7 @@ import { Dimensions, PixelRatio, ScaledSize } from "react-native";
 
 export let deviceHeight: number = Dimensions.get("window").height;
 export let deviceWidth: number = Dimensions.get("window").width;
-Dimensions.addEventListener(
+export const addDimensionListener = () => Dimensions.addEventListener(
   "change",
   (e: { window: ScaledSize; screen: ScaledSize }) => {
     const { width, height } = e.window;
