@@ -28,10 +28,12 @@
   "author": "JYKIM",
   "license": "MIT",
   "peerDependencies": {
+    "react": ">=16.10.0",
     "react-native": ">=0.51.0"
   },
   "devDependencies": {
     "@types/node": "^11.11.3",
+    "@types/react": "^16.9.34",
     "@types/react-native": "^0.57.63",
     "react-native": "^0.59.9",
     "tslint": "^5.17.0",
