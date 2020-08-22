@@ -7,9 +7,10 @@ Dimensions.addEventListener(
   "change",
   (e: { window: ScaledSize; screen: ScaledSize }) => {
     const { width, height } = e.window;
+    console.log('안에서 변했니')
     // e.screen.
-    deviceWidth = e.window.width;
-    deviceHeight = e.window.height;
+    deviceWidth = width;
+    deviceHeight = height;
   }
 );
 
