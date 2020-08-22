@@ -1,8 +1,6 @@
 import * as React from 'react';
 import { Dimensions, PixelRatio } from "react-native";
 
-// const pixelRatio = PixelRatio.getFontScale();
-
 export let deviceHeight: number = Dimensions.get("window").height;
 export let deviceWidth: number = Dimensions.get("window").width;
 
@@ -75,13 +73,13 @@ export const screenRatio = (): number => {
 };
 
 export const responsiveNumber = (integer: number): number => {
-  const [width, setWidth] = React.useState(375);
+  const [width, setWidth] = React.useState(Dimensions.get("window").width);
   const convertedInteger = Number(integer);
   const widthToUse = 375;
   const ratio = width / widthToUse;
-  React.useEffect(() => {
-    setWidth(Dimensions.get("window").width);
-  })
+  // React.useEffect(() => {
+  //   setWidth(Dimensions.get("window").width);
+  // })
   return floorToInt(convertedInteger * ratio);
 };
 
