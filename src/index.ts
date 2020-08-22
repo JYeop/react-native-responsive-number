@@ -2,8 +2,8 @@ import { Dimensions, PixelRatio } from "react-native";
 
 // const pixelRatio = PixelRatio.getFontScale();
 
-export const deviceHeight: number = Dimensions.get("window").height;
-export const deviceWidth: number = Dimensions.get("window").width;
+export let deviceHeight: number = Dimensions.get("window").height;
+export let deviceWidth: number = Dimensions.get("window").width;
 
 const floorToInt = (integer: number): number => {
   return Math.floor(integer * 10) / 10;
