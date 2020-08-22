@@ -1,8 +1,17 @@
-import * as React from 'react';
-import { Dimensions, PixelRatio } from "react-native";
+import * as React from "react";
+import { Dimensions, PixelRatio, ScaledSize } from "react-native";
 
 export let deviceHeight: number = Dimensions.get("window").height;
 export let deviceWidth: number = Dimensions.get("window").width;
+Dimensions.addEventListener(
+  "change",
+  (e: { window: ScaledSize; screen: ScaledSize }) => {
+    const { width, height } = e.window;
+    // e.screen.
+    deviceWidth = e.window.width;
+    deviceHeight = e.window.height;
+  }
+);
 
 const floorToInt = (integer: number): number => {
   return Math.floor(integer * 10) / 10;
@@ -99,5 +108,5 @@ export default {
   deviceHeight,
   deviceWidth,
   screenRatio,
-  responsiveLetterSpacing
+  responsiveLetterSpacing,
 };
