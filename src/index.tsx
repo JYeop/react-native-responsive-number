@@ -1,18 +1,20 @@
 import * as React from "react";
 import { Dimensions, PixelRatio, ScaledSize } from "react-native";
 
-export let deviceHeight: number = Dimensions.get("window").height;
-export let deviceWidth: number = Dimensions.get("window").width;
-export const addDimensionListener = Dimensions.addEventListener(
-  "change",
-  (e: { window: ScaledSize; screen: ScaledSize }) => {
-    const { width, height } = e.window;
-    console.log("안에서 변했니");
-    // e.screen.
-    deviceWidth = width;
-    deviceHeight = height;
-  }
-);
+const windowState = () => {
+  const [width, setWidth] = React.useState(375);
+  const [height, setHeight] = React.useState(767);
+  React.useEffect(() => {
+    Dimensions.addEventListener("change", async (e) => {
+      setWidth(e.window.width);
+      setHeight(e.window.height);
+    });
+  }, []);
+  return { width, height };
+};
+
+export const deviceHeight: number = Dimensions.get("window").height;
+export const deviceWidth: number = Dimensions.get("window").width;
 
 const floorToInt = (integer: number): number => {
   return Math.floor(integer * 10) / 10;
@@ -83,10 +85,10 @@ export const screenRatio = (): number => {
 };
 
 export const responsiveNumber = (integer: number): number => {
-  const [width, setWidth] = React.useState(Dimensions.get("window").width);
+  // const [width, setWidth] = React.useState(Dimensions.get("window").width);
   const convertedInteger = Number(integer);
   const widthToUse = 375;
-  const ratio = width / widthToUse;
+  const ratio = windowState().width / widthToUse;
   // React.useEffect(() => {
   //   setWidth(Dimensions.get("window").width);
   // })
