@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Dimensions, PixelRatio, ScaledSize } from "react-native";
 
-const windowState = () => {
+export const windowState = () => {
   const [width, setWidth] = React.useState(375);
   const [height, setHeight] = React.useState(767);
   React.useEffect(() => {
