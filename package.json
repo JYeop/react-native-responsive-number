@@ -35,7 +35,7 @@
     "@types/node": "^11.11.3",
     "@types/react": "^16.9.34",
     "@types/react-native": "^0.57.63",
-    "react-native": "^0.59.9",
+    "react-native": "^0.62.3",
     "tslint": "^5.17.0",
     "typescript": "^3.5.2"
   }
